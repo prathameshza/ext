@@ -23,7 +23,7 @@ async def fetch_webpage_content(url: str) -> Optional[str]:
     """Fetch webpage content using Puppeteer"""
     browser = await launch(
         headless=True,
-        args=['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage']
+        args=['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu']
     )
     try:
         page = await browser.newPage()
@@ -80,6 +80,7 @@ async def fetch_webpage_content(url: str) -> Optional[str]:
         return html_content
         
     except Exception as e:
+        print(f"Browser error details: {str(e)}")
         raise HTTPException(status_code=400, detail=f"Error fetching URL: {str(e)}")
     finally:
         await browser.close()
@@ -96,7 +97,9 @@ async def convert_to_markdown(url: HttpUrl):
             "markdown": markdown_content
         }
     except Exception as e:
+        print(f"Error details: {str(e)}")
         raise HTTPException(status_code=500, detail=f"Conversion failed: {str(e)}")
+        
 
 if __name__ == "__main__":
     import uvicorn
