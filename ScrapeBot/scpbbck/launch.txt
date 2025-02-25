@@ -1,0 +1,122 @@
+uvicorn backend:app --host 0.0.0.0 --port 8080
+
+
+configs:
+
+sudo apt-get install libnss3 libnspr4 libasound2t64
+pip install uvicorn fastapi
+
+
+
+
+backend api:
+
+post method
+
+http://localhost:8880/crawl
+
+json body->
+{
+  "provider": "gemini/gemini-pro",
+  "api_key": "AIzaSyBS_cLZXhdjCalyaMmie6uqQ-fHNK1Yq3E",
+  "instruction": "extract all rows from main table with all the columns",
+  "url": "https://web.lmarena.ai/leaderboard"
+}
+
+response:
+
+{
+  "success": true,
+  "data": [
+    {
+      "name": "Anthropic",
+      "price": "1252.68",
+      "error": false
+    },
+    {
+      "name": "DeepSeek",
+      "price": "1210.90",
+      "error": false
+    },
+    {
+      "name": "OpenAI",
+      "price": "1157.14",
+      "error": false
+    },
+    {
+      "name": "Anthropic",
+      "price": "1138.22",
+      "error": false
+    },
+    {
+      "name": "Google",
+      "price": "1111.42",
+      "error": false
+    },
+    {
+      "name": "OpenAI",
+      "price": "1106.80",
+      "error": false
+    },
+    {
+      "name": "OpenAI",
+      "price": "1054.47",
+      "error": false
+    },
+    {
+      "name": "OpenAI",
+      "price": "1051.66",
+      "error": false
+    },
+    {
+      "name": "Google",
+      "price": "1038.65",
+      "error": false
+    },
+    {
+      "name": "Google",
+      "price": "1026.64",
+      "error": false
+    },
+    {
+      "name": "Google",
+      "price": "1025.29",
+      "error": false
+    },
+    {
+      "name": "Alibaba",
+      "price": "987.17",
+      "error": false
+    },
+    {
+      "name": "Google",
+      "price": "987.10",
+      "error": false
+    },
+    {
+      "name": "DeepSeek",
+      "price": "967.68",
+      "error": false
+    },
+    {
+      "name": "OpenAI",
+      "price": "964.00",
+      "error": false
+    },
+    {
+      "name": "Alibaba",
+      "price": "904.64",
+      "error": false
+    },
+    {
+      "name": "Google",
+      "price": "895.41",
+      "error": false
+    },
+    {
+      "name": "Meta",
+      "price": "814.01",
+      "error": false
+    }
+  ]
+}
