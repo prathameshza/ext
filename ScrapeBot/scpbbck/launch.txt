@@ -18,7 +18,7 @@ http://localhost:8880/crawl
 json body->
 {
   "provider": "gemini/gemini-pro",
-  "api_key": "AIzaSyBS_cLZXhdjCalyaMmie6uqQ-fHNK1Yq3E",
+  "api_key": "",
   "instruction": "extract all rows from main table with all the columns",
   "url": "https://web.lmarena.ai/leaderboard"
 }
